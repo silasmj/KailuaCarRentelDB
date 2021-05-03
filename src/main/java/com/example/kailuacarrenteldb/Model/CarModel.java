@@ -82,7 +82,7 @@ public class CarModel {
         this.seats = seats;
     }
 
-    public boolean isAircon() {
+    public boolean getAircon() {
         return aircon;
     }
 
@@ -90,7 +90,7 @@ public class CarModel {
         this.aircon = aircon;
     }
 
-    public boolean isCruiseControl() {
+    public boolean getCruiseControl() {
         return cruiseControl;
     }
 
