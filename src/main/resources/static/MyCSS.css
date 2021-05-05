@@ -105,14 +105,12 @@ input[type=text]:focus, input[type=password]:focus {
     opacity: 1;
 }
 
-
-table{
-    border-collapse;
-    width: 50%;
-}
 .luxuryCont {
     border-collapse: collapse;
     width: 40%;
-    border: 5px solid red;
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px;
 }
+
 

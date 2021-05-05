@@ -32,18 +32,18 @@
         <th>KM</th>
         <th>First Registration</th>
         <th>Model ID</th>
-        <th>Model Name</th>
+        <th>Model</th>
         <th>Brand Name</th>
       </thead>
       <tbody>
-        <tr th:each="Car: ${luxury}">
-            <td th:text="${car.car_id}"/>
-            <td th:text="${car.registration_num}"/>
-            <td th:text="${car.km}"/>
-            <td th:text="${car.model}"/>
-            <td th:text="${car.firstregistration}"/>
-            <td th:text="${car.model_id}"/>
-            <td th:text="${car.brand}"/>
+        <tr th:each="car: ${luxury}">
+            <td th:text="${car.id}"></td>
+            <td th:text="${car.registration_num}"></td>
+            <td th:text="${car.km}"></td>
+            <td th:text="${car.firstregistration}"></td>
+            <td th:text="${car.model_id}"></td>
+            <td th:text="${car.model_name}"></td>
+            <td th:text="${car.brand}"></td>
         </tr>
       </tbody>
     </table>

@@ -1,30 +1,42 @@
 package com.example.kailuacarrenteldb.Model;
 
 public class Car {
-    int car_id;
+    int id;
     String registration_num;
     int km;
     String model;
     String firstregistration;
     int model_id;
     String brand;
+    String model_name;
 
-    public Car(int car_id, String registration_num, int km, String model, String firstregistration, int model_id, String brand) {
-        this.car_id = car_id;
+  /*  public Car(int id, String registration_num, int km, String model, String firstregistration, int model_id, String brand, String model_name) {
+        this.id = id;
         this.registration_num = registration_num;
         this.km = km;
         this.model = model;
         this.firstregistration = firstregistration;
         this.model_id = model_id;
         this.brand = brand;
+        this.model_name = model_name;
+    } */
+    public Car() {
     }
 
-    public int getCar_id() {
-        return car_id;
+    public String getModel_name() {
+        return model_name;
     }
 
-    public void setCar_id(int car_id) {
-        this.car_id = car_id;
+    public void setModel_name(String model_name) {
+        this.model_name = model_name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getRegistration_num() {
