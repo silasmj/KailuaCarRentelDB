@@ -14,8 +14,29 @@ public class CarRepo {
     @Autowired
     JdbcTemplate template;
 
-    public List<Car> showCar(){
-        String sql = "SELECT * FROM car";
+    public List<Car> showLuxury(){
+        String sql = "SELECT car.id, registration_num, km, firstregistration, model_id, model.model_name, brand\n" +
+                "FROM car\n" +
+                "join model on model_id=model.id\n" +
+                "WHERE model.type_id = 1;";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        return template.query(sql, rowMapper);
+    }
+
+    public List<Car> showFamily(){
+        String sql = "SELECT car.id, registration_num, km, firstregistration, model_id, model.model_name, brand\n" +
+                "FROM car\n" +
+                "join model on model_id=model.id\n" +
+                "WHERE model.type_id = 2;";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        return template.query(sql, rowMapper);
+    }
+
+    public List<Car> showSport(){
+        String sql = "SELECT car.id, registration_num, km, firstregistration, model_id, model.model_name, brand\n" +
+                "FROM car\n" +
+                "join model on model_id=model.id\n" +
+                "WHERE model.type_id = 3;";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         return template.query(sql, rowMapper);
     }
@@ -36,7 +57,7 @@ public class CarRepo {
     }
     public Car updateCar(int car_id, Car car){
         String sql = "UPDATE car SET registration_num = ?, km = ?, model = ?, firstregistration = ?, rental_id = ?, model_id = ?, WHERE car_id = ?";
-        template.update(sql, car.getCar_id(), car.getFirstregistration(), car.getKm(), car.getModel(), car.getModel_id(), car.getRegistration_num(), car.getRental_id());
+        template.update(sql, car.getCar_id(), car.getFirstregistration(), car.getKm(), car.getModel(), car.getModel_id(), car.getRegistration_num(), car.getBrand());
         return null;
     }
 }

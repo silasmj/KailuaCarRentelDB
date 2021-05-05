@@ -7,34 +7,29 @@ public class Customer {
     private String customerType;
     private String email;
     private int phoneNum;
-    private int companyPhone;
     private String address;
     private int postalCode;
     private String city;
     private int licenseNum;
     private String driverSinceDate;
-    private String companyName;
-    private int CRN;
+
 
     public Customer() {
 
     }
 
-    public Customer(int customer_id, String firstName, String lastName, String customerType, String email, int phoneNum, int companyPhone, String address, int postalCode, String city, int licenseNum, String driverSinceDate, String companyName, int CRN) {
+    public Customer(int customer_id, String firstName, String lastName, String customerType, String email, int phoneNum, String address, int postalCode, String city, int licenseNum, String driverSinceDate) {
         this.customer_id = customer_id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.customerType = customerType;
         this.email = email;
         this.phoneNum = phoneNum;
-        this.companyPhone = companyPhone;
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;
         this.licenseNum = licenseNum;
         this.driverSinceDate = driverSinceDate;
-        this.companyName = companyName;
-        this.CRN = CRN;
     }
 
     public int getCustomer_id() {
@@ -85,13 +80,6 @@ public class Customer {
         this.phoneNum = phoneNum;
     }
 
-    public int getCompanyPhone() {
-        return companyPhone;
-    }
-
-    public void setCompanyPhone(int companyPhone) {
-        this.companyPhone = companyPhone;
-    }
 
     public String getAddress() {
         return address;
@@ -131,22 +119,6 @@ public class Customer {
 
     public void setDriverSinceDate(String driverSinceDate) {
         this.driverSinceDate = driverSinceDate;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public int getCRN() {
-        return CRN;
-    }
-
-    public void setCRN(int CRN) {
-        this.CRN = CRN;
     }
 }
 

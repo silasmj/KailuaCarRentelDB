@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Luxury car</title>
+        <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+
+<ul>
+    <img src="https://i.pinimg.com/originals/0e/24/ff/0e24ff73d8c96d223fdbd7d0c70f944d.jpg" alt="Kailua logo" style="width: 40px; height: 50px; float: left">
+    <p id="Header">Kailua Car Rental</p>
+
+    <li><a href="#customers">Customers</a></li>
+    <li><a href="#rentals">Rentals</a></li>
+    <li class="dropdown">
+        <a class="dropbtn">Cars</a>
+        <div class="dropdown-content">
+            <a href="#">Sport</a>
+            <a href="#">Family</a>
+            <a href="/luxury">Luxury</a>
+        </div>
+    </li>
+</ul>
+<div class="bg-image">
+    <h1>List of Luxury Cars:</h1>
+    <form action="#" class="luxuryCont">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Registration Number</th>
+        <th>KM</th>
+        <th>First Registration</th>
+        <th>Model ID</th>
+        <th>Model Name</th>
+        <th>Brand Name</th>
+      </thead>
+      <tbody>
+        <tr th:each="Car: ${luxury}">
+            <td th:text="${car.car_id}"/>
+            <td th:text="${car.registration_num}"/>
+            <td th:text="${car.km}"/>
+            <td th:text="${car.model}"/>
+            <td th:text="${car.firstregistration}"/>
+            <td th:text="${car.model_id}"/>
+            <td th:text="${car.brand}"/>
+        </tr>
+      </tbody>
+    </table>
+    </form>
+</div>
+</body>
+</html>

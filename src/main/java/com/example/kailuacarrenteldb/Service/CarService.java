@@ -12,9 +12,16 @@ public class CarService {
     @Autowired
     CarRepo carRepo;
 
-    public List<Car> showCar(){
-        return carRepo.showCar();
+    public List<Car> showLuxury(){
+        return carRepo.showLuxury();
     }
+    public List<Car> showFamily(){
+        return carRepo.showFamily();
+    }
+    public List<Car> showSport(){
+        return carRepo.showSport();
+    }
+
     public Car addCar(Car car){
         return carRepo.addCar(car);
     }
