@@ -57,13 +57,11 @@ li.dropdown {
 }
 .bg-image{
     background-image: url("https://wpcdn.us-midwest-1.vip.tn-cloud.net/www.honolulumagazine.com/content/uploads/data-import/93a57b85/kailua-cover-story-birdseye-view.jpg");
-
-    min-height: 1887px;
-
-    background-position: center;
+    min-height: 100%;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: static;
 }
 .container {
     position: absolute;

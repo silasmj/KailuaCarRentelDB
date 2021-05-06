@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Private Customers</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<div class="bg-image">
+    <ul>
+        <img src="https://g9v6w6w7.rocketcdn.me/wp-content/uploads/2019/11/car.png" alt="Kailua logo" style="width: 40px; height: 50px; float: left">
+        <p id="Header">Kailua Car Rental</p>
+
+        <li class="dropdown">
+            <a class="dropbtn">Customers</a>
+            <div class="dropdown-content">
+                <a href="#">Business Customers</a>
+                <a href="#">Private Customers</a>
+            </div>
+        </li>
+        <li><a href="/rental">Rentals</a></li>
+        <li class="dropdown">
+            <a class="dropbtn">Cars</a>
+            <div class="dropdown-content">
+                <a href="/sport">Sport</a>
+                <a href="/family">Family</a>
+                <a href="/luxury">Luxury</a>
+            </div>
+        </li>
+    </ul>
+
+    <h1>List of Private Customers:</h1>
+    <form action="#" class="privateCont">
+        <table>
+            <thead>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Customer Type</th>
+            <th>Email</th>
+            <th>Phone Num</th>
+            <th>Address</th>
+            <th>Postal Code</th>
+            <th>City</th>
+            <th>License Num</th>
+            </thead>
+            <tbody>
+            <tr th:each="customers: ${private}">
+                <td th:text="${customers.id}"></td>
+                <td th:text="${customers.first_name}"></td>
+                <td th:text="${customers.last_name}"></td>
+                <td th:text="${customers.customer_type}"></td>
+                <td th:text="${customers.email}"></td>
+                <td th:text="${customers.phone_num}"></td>
+                <td th:text="${customers.address}"></td>
+                <td th:text="${customers.postal_code}"></td>
+                <td th:text="${customers.city}"></td>
+                <td th:text="${customers.license_num}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>

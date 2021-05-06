@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Rentals</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<div class="bg-image">
+    <ul>
+        <img src="https://i.pinimg.com/originals/0e/24/ff/0e24ff73d8c96d223fdbd7d0c70f944d.jpg" alt="Kailua logo" style="width: 40px; height: 50px; float: left">
+        <p id="Header">Kailua Car Rental</p>
+
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="/rental">Rentals</a></li>
+        <li class="dropdown">
+            <a class="dropbtn">Cars</a>
+            <div class="dropdown-content">
+                <a href="#">Sport</a>
+                <a href="#">Family</a>
+                <a href="/luxury">Luxury</a>
+            </div>
+        </li>
+    </ul>
+    <h1>List of rentals:</h1>
+    <form action="#" class="luxuryCont">
+        <table>
+            <thead>
+            <th>ID</th>
+            <th>Rental Start</th>
+            <th>Rental End</th>
+            <th>Customer ID</th>
+            <th>Car ID</th>
+            </thead>
+            <tbody>
+            <tr th:each="rental: ${rental}">
+                <td th:text="${rental.id}"></td>
+                <td th:text="${rental.rental_start}"></td>
+                <td th:text="${rental.rental_end}"></td>
+                <td th:text="${rental.customer_id}"></td>
+                <td th:text="${rental.car_id}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>
